@@ -1,4 +1,5 @@
-# Wedding-Invite <img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="120" alt="React Icons">
+# Wedding-Invite <img src="https://www.cdnlogo.com/logos/r/85/react.svg" width="20" alt="React Icons">
+
 
 
 ## Overview
