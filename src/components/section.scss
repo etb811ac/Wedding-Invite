@@ -1,0 +1,256 @@
+#section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .section-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .section-title {
+            color: #660F10;
+            font-size: 80px;
+            font-weight: 400;
+        }
+
+        .section-body {
+            font-size: 28px;
+            line-height: 150%;
+            color: #7A8760;
+            max-width: 50vw;
+            margin: 30px auto;
+
+        }
+
+        .cards-widget {
+            display: flex;
+            justify-content: space-around;
+            width: 100vw;
+            max-width: 1440px;
+        }
+
+        .info-widget {
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-evenly;
+            width: 100vw;
+            max-width: 1440px;
+            gap: 100px
+        }
+    }
+
+    .wave {
+        position: absolute;
+        min-width: 100vw;
+        top: 0px;
+    }
+
+    &.banner-section {
+        height: 70vh;
+        margin-top: 0;
+
+        @media (max-width:1024px) {
+            height: 50vh;
+            min-height: 95vh;
+        }
+
+    }
+
+    &.countdown-section {
+        position: relative;
+        padding-top: 200px;
+
+        &::before {
+            content: "";
+            width: 600px;
+            height: 300px;
+
+            background-image: url('../assets/flower-d2.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: -290px;
+            top: 190px;
+            bottom: 0;
+            margin: auto;
+            transform: rotate(90deg);
+
+
+
+        }
+
+        .wave {
+            top: -240px;
+            height: 400px;
+        }
+    }
+
+    &.gallery-section {
+        height: 90vh;
+        justify-content: start;
+        .section-wrapper {
+            height: 150vh;
+            min-height: 110vh;
+            overflow: hidden;
+        }
+
+        .wave {
+            height: 150px;
+            top: -60px;
+        }
+
+        .react-photo-album {
+            width: 100vw;
+            height: 150vh;
+        }
+    }
+
+    &.party-section {
+
+        min-height: 100vh;
+        background: url('../assets/waves/wave-4b.svg') no-repeat;
+        background-size: contain;
+        background-position: bottom;
+        background-color: #f6f6f6;
+
+        .wave {
+            top: -300px;
+            height: 300px;
+
+        }
+    }
+
+    &.gifts-section {
+
+        min-height: 80vh;
+        justify-content: center;
+
+        .wave {
+            top: -90px;
+            height: 250px;
+            z-index: 0;
+
+
+        }
+
+        .gifts-section-rose {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            width: 360px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .section-wrapper {
+            margin-top: 30vh;
+        }
+    }
+
+    @media (max-width:1024px) {
+        .section-wrapper {
+            .section-title {
+                font-size: 60px;
+            }
+
+            .section-body {
+                font-size: 18px;
+                max-width: 70vw;
+            }
+
+
+            .cards-widget {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 30px;
+            }
+        }
+
+        &.gallery-section {
+            
+            .wave {
+                height: 70px;
+                top: -35px
+            }
+        }
+
+        &.countdown-section {
+
+            &::before {
+                opacity: .9;
+                width: 400px;
+                left: -230px;
+                top: 1200px;
+            }
+        }
+
+
+
+
+    }
+
+    @media (max-width:768px) {
+        .section-wrapper {
+
+            .section-body {
+                max-width: 90vw;
+            }
+
+            .cards-widget {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .info-widget {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        &.banner-section {
+            height: auto;
+        }
+
+        &.countdown-section {
+            &::before {
+                opacity: .3;
+                width: 400px;
+                left: -230px;
+                top: 500px;
+            }
+        }
+
+        &.gallery-section {
+            .wave {
+                height: 60px;
+                top: -35px
+            }
+        }
+
+        &.party-section {
+            .section-wrapper {
+                .section-title {
+                    margin-top: 100px;
+                }
+            }
+        }
+
+        &.gifts-section {
+            min-height: 60vh;
+
+            .gifts-section-rose {
+                width: 200px;
+                top: 0;
+            }
+        }
+
+    }
+
+}

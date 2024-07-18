@@ -1,0 +1,105 @@
+.form {
+    width: 80%;
+
+    .error-message {
+        color: #660F10;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .field {
+        position: relative;
+        padding-top: 40px;
+
+        label {
+            position: absolute;
+            bottom: 0;
+            font-size: 20px;
+            color: #737373;
+            z-index: 0;
+            transition: .5s all;
+
+            &.filled {
+                font-size: 15px;
+                color: #660F10;
+                transform: translateY(-30px);
+            }
+        }
+
+        input {
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid #737373;
+            width: 80%;
+            height: 20px;
+            font-size: 20px;
+            position: relative;
+            z-index: 2;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &:has(input:focus) {
+            label {
+                font-size: 15px;
+                color: #660F10;
+                transform: translateY(-30px);
+            }
+        }
+
+        input:focus+label,
+        input:valid+label {
+            transform: translateY(-150%);
+            font-size: 14px;
+            left: 0px;
+            color: #fce38a;
+        }
+    }
+
+    button {
+        margin-top: 40px;
+        background-color: #660F10;
+        border-radius: 50px;
+        border: none;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 500;
+        font-family: 'Vidaloka';
+        padding: 15px 25px;
+        transition: .5s all;
+        z-index: 2;
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 5px 5px 14px #5e5e5e;
+        }
+    }
+}
+
+.submited {
+    font-size: 30px;
+    color: #660F10;
+    font-weight: bold;
+
+    span {
+        display: block;
+        font-size: 20px;
+        display: block;
+        margin-bottom: 30px;
+        color: #1e1e1e;
+    }
+}
+
+@media (max-width:1024px) {
+    .form {
+        button {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width:768px) {
+
+}

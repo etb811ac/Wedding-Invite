@@ -1,0 +1,72 @@
+#card {
+    position: relative;
+    background-color: #FFECE4;
+    padding: 30px 40px;
+    border-radius: 50px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 9;
+
+    .card-title {
+        color: #660F10;
+        font-size: 40px;
+    }
+
+    .card-body {
+        color: #7A8760;
+        font-size: 20px;
+        margin: 40px auto;
+    }
+
+    &.flowers-top-left {
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: -28px;
+            left: -65px;
+            transform: rotate(-65deg);
+            width: 190px;
+            height: 140px;
+            background-image: url('../assets/flower-d1.png');
+            background-size: contain;
+        }
+    }
+
+    &.flowers-bottom-right {
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -28px;
+            right: -65px;
+            transform: rotate(110deg);
+            width: 190px;
+            height: 140px;
+            background-image: url('../assets/flower-d1.png');
+            background-size: contain;
+        }
+    }
+
+    @media (max-width:1024px) {
+        padding: 30px 15px;
+        max-width: 30vw;
+        min-height: 300px;
+        .card-title {
+            font-size: 35px;
+        }
+
+        .card-body{
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width:768px) {
+
+        max-width: 70vw;
+    }
+}

@@ -1,0 +1,209 @@
+.banner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .banner-gallery {
+        position: relative;
+        width: 55vw;
+        display: flex;
+        justify-content: flex-start;
+
+        height: 100vh;
+        flex-wrap: wrap;
+        gap: 15px;
+        flex-direction: column;
+
+        img {
+            width: 100%
+        }
+
+        .right {
+            width: 45%;
+            height: 100%;
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+        }
+
+        .left {
+            width: 52%;
+            height: 100%;
+            max-height: 100%;
+        }
+
+        &:before {
+            content: "";
+            width: 120px;
+            height: 150px;
+            background-image: url('../assets/divider.svg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 0;
+            height: 100%;
+            background-position: right;
+            // filter: drop-shadow(-15px 0px 10px #252525);
+        }
+    }
+
+    .banner-body {
+        width: 45vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        height: 100vh;
+
+        .top-logo {
+            transform: rotate(180deg);
+            width: 70%;
+            margin-bottom: 2vh;
+            margin-top: -70px;
+            position: absolute;
+            top: 2%;
+        }
+
+        .banner-date {
+            border: 2px solid #6A2D27;
+            padding: 10px 20px;
+            color: #6A2D27;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .banner-logo {
+            width: 50%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .banner-quote {
+            color: #A6A6A6;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            width: 60%;
+            margin: 100px auto;
+            position: relative;
+
+            &:before,
+            &:after {
+                content: '';
+                width: 60px;
+                height: 45px;
+                background-image: url('../assets/quote.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+
+            }
+
+            &:before {
+                top: -60px;
+            }
+
+            &:after {
+                bottom: -60px;
+                transform: rotate(180deg);
+            }
+        }
+
+
+
+    }
+
+
+    @media (max-width:1024px) {
+        .banner-gallery {
+            .left {
+                width: 50%;
+            }
+
+            .right {
+                width: 50%;
+            }
+
+            &:before {
+                width: 100px;
+                right: -30px;
+            }
+
+        }
+
+        .banner-body {
+            .top-logo {
+                width: 85%;
+                top: 5%;
+            }
+
+            .banner-date {
+                font-size: 20px;
+            }
+
+            .banner-logo {
+                width: 70%;
+            }
+        }
+
+    }
+
+    @media (max-width:768px) {
+        flex-direction: column;
+
+        .banner-gallery {
+            display: none;
+        }
+
+        .banner-gallery-mobile{
+            display: block;
+            height: 55vh;
+            width: 100vw;
+            position: relative;
+            background-size: 170%;
+            background-position: center calc(50% + 30px);
+            animation: moveToLeft 45s;
+            transition: all 2s;
+            &:before {
+                content: "";
+                display: block;
+                width: 100vw;
+                height: 50px;
+                background-image: url('../assets/divider-h.svg');
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                position: absolute;
+                right: 0;
+                left: 0;
+                margin: auto;
+                bottom: 0;
+                background-position: right;
+                // filter: drop-shadow(-15px 0px 10px #252525);
+            }
+        }
+
+        .banner-body {
+            width: 100vw;
+            height: 110vh;
+            justify-content: start;
+
+            .top-logo{
+                width: 60vw;
+                left: -85px;
+                top: 0px;
+                transform: rotate(160deg);
+            }
+
+            .banner-date{
+                margin-top: 30px;
+                font-size: 15px;
+            }
+        }
+    }
+}
+

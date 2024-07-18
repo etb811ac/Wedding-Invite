@@ -1,0 +1,111 @@
+.modal-container{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(0px);
+    background-color: rgba($color: #000000, $alpha: .3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity .5s, backdrop-filter 1s;
+    opacity: 0;
+
+    .close-btn{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        border: none;
+        color: #fff;
+        background-color: #660F10;
+        font-size: 20px;
+        border-radius: 50%;
+        font-weight: bold;
+        width: 60px;
+        height: 60px;
+        transition: .5s all;
+
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: 5px 5px 14px #5e5e5e;
+        }
+        
+    }
+
+    .modal{
+        background-color: #F2E9DD;
+        width: 490px;
+        height: 550px;
+        border-radius: 35px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 100px;
+
+        .title{
+            color: #660F10;
+            font-size: 40px;
+        }
+
+        .body{
+            color: #545454;
+            font-size: 20px;
+        }
+
+        .color-container{
+            display: flex;
+            gap: 10px;          
+            .color{
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+            }
+        }
+
+
+        &::before{
+            content: "";
+            width: 600px;
+            height: 250px;
+            background-image: url('../assets/flower-d2.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: -150px;
+        }
+        
+    }
+
+    &.opened{
+        opacity: 1;
+        backdrop-filter: blur(10px);
+    }
+
+    @media (max-width:1024px) {
+
+    }
+
+    @media (max-width:768px) {
+        .modal{
+            width: 70vw;
+            height: 490px;
+            padding: 20px;
+
+            .color-container{
+                .color{
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+
+            &::before{
+                width: 350px;
+                top: -80px;
+            }
+        }
+    }
+}

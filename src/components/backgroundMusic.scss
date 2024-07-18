@@ -1,0 +1,140 @@
+.initial-popup{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(50px);
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: intro .3s linear;
+    transition: 1s all;
+
+
+    .initial-popup-frame{
+        background-color: #F6f6f6;
+        width: 490px;
+        height: 650px;
+        border-radius: 35px;
+        border: 1px solid #efefef;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 40px;
+        transition: .7s all;
+
+        p{
+            color: #545454;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        img{
+            width: 350px;
+        }
+
+        button{
+            margin-top: 20px;
+        }
+
+        &::before{
+            content: "";
+            width: 600px;
+            height: 250px;
+            background-image: url('../assets/flower-d2.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: -150px;
+        }
+    }
+
+    &.hide{
+        backdrop-filter: blur(0px);
+        .initial-popup-frame{
+            opacity: 0;
+        }
+    }
+
+    @media (max-width:1024px) {
+        .initial-popup-frame{
+            width: 400px;
+            height: 500px;
+            padding: 10px;
+            p{
+                font-size: 18px;
+            }
+            img{
+                width: 200px;
+            }
+
+            &::before{
+                width: 450px;
+                top: -120px;
+            }
+        }
+    }
+
+    @media (min-width:1024px) and (min-height:700px){
+        .initial-popup-frame{
+            width: 400px;
+            height: 500px;
+            padding: 10px;
+            p{
+                font-size: 18px;
+            }
+            img{
+                width: 200px;
+            }
+
+            &::before{
+                width: 450px;
+                top: -120px;
+            }
+        }
+    }
+
+    @media (max-width:768px) {
+        .initial-popup-frame{
+            width: 85vw;
+
+            &::before{
+                width: 85vw;
+                top: -80px;
+            }
+        }
+    }
+
+
+}
+
+.toggle-button{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 50%;
+    background-color: #660F10;
+    box-shadow: 5px 5px 14px #A55455;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s;
+
+    img{
+        width: 60%;
+    }
+
+    &:hover{
+        transform: scale(1.2);
+    }
+}
+
+@keyframes intro{
+    0% {opacity : 0}
+    100%{opacity: 1}
+}
