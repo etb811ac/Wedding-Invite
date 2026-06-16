@@ -3,8 +3,11 @@
 <p align="center">Instead of a standard paper invite, we designed our own interactive digital wedding invitation — countdown, photo gallery, parallax scenes, music, and an online RSVP.</p>
 
 <p align="center">
-  <!-- TODO: the original domain (estebanymariam.online) is no longer live — add a new demo URL if you redeploy -->
-  🔗 <b>Live Demo:</b> <i>offline</i>
+  <a href="https://invitacion-boda-silk.vercel.app/"><img src="https://img.shields.io/badge/▶%20Live%20Demo-Open-FF4D00?style=for-the-badge" alt="Live Demo"></a>
+</p>
+
+<p align="center">
+  <img src=".github/preview.png" alt="Wedding invitation preview" width="360">
 </p>
 
 <p align="center">
